@@ -32,7 +32,7 @@ public class CarShowRoom {
 	public void addManager(Manager dto) {
 		if (dto != null) {
 
-			this.manager = manager;
+			this.manager = dto;
 			System.out.println("manager added");
 
 		} else {
@@ -50,20 +50,50 @@ public class CarShowRoom {
 		}
 	}
 
-	public void removeManager() {
-		this.manager = null;
-		System.out.println("manager is removed");
-
+	public void removeManager()
+	{
+		this.manager=null;
+	}
+	
+	
+	
+	public void updateManager(Manager name)
+	{
+		if(manager!=null)
+		{
+			this.manager=name;
+		System.out.println("manager added");
+	}
+	else
+	{
+		System.out.println("Manager is not updated ");
+	}
+	
 	}
 
-	public void updateManager(long contactNo) {
-		if(manager=removeManager()) {
-		
-		System.out.println(this.manager.getContactNo());
-		
-		System.out.println("manager is  not updated");
+	public String getName() {
+		return name;
 	}
 
-}
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public Manager getManagerDTO() {
+		return manager;
+	}
+
+	public void setManager(Manager manager) {
+		this.manager = manager;
+	}
+
 
 }
